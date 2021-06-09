@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: invity_api_db_pass
+      POSTGRES_USER: invity_api_db_user
+      POSTGRES_DB: invity_api_db_dev
+    ports:
+      - 5432:5432
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
